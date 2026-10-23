@@ -1,0 +1,96 @@
+:root {
+    --base-100: #ffffff;
+    --base-200: #eeeeee;
+    --base-300: #dedede;
+    --base-text: #161616;
+
+    --primary: #45aeee;
+    --primary-text: #020b13;
+    --secondary: #e8488a;
+    --secondary-text: #130207;
+    --accent: #fff234;
+    --accent-text: #161401;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+html {
+    background-color: var(--base-100);
+    color: var(--base-text);
+}
+
+body {
+    max-width: 1200px;
+    width: 100%;
+    min-height: 100vh;   
+    margin: 0 auto 0 auto;
+
+    background-color: var(--base-200);
+}
+
+body > main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 16em);
+    gap: 1em;
+    place-content: center;
+}
+
+body > main > div {
+    width: 15em;
+    height: 24em;
+
+    /* 1x2 Aspect */
+
+    padding: 0.5em;
+
+    background-color: var(--base-300);
+}
+
+body > main > div > img {
+    width: 15em;
+    height: 10em;
+    
+    object-fit: contain;
+}
+
+body > main > div > * {
+    text-align: center;
+}
+
+body > main > div > ul > li {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    margin: 1em;
+
+    border-bottom: var(--primary) solid 2px;
+    border-bottom-width: 2px;
+}
+
+footer {
+    margin: 5em 0 0 0;
+    width: 100%;
+    height: max-content;
+    min-height: 10em;
+
+    background-color: var(--base-300);
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer > * {
+    width: 10em;
+    padding: 1em;
+    min-height: 5em;
+    margin: 0 auto 0 auto;
+}
