@@ -12,10 +12,17 @@
     --accent-text: #161401;
 }
 
+@font-face {
+    font-family: 'Commissioner';
+    src: url('../assets/fonts/Commissioner-VariableFont_FLAR,VOLM,slnt,wght.ttf') format('truetype');
+}
+
 * {
     margin: 0;
     padding: 0;
     list-style-type: none;
+
+    font-family: 'Commissioner', sans-serif;
 }
 
 html {
@@ -32,14 +39,14 @@ body {
     background-color: var(--base-200);
 }
 
-body > main {
+#cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, 16em);
     gap: 1em;
     place-content: center;
 }
 
-body > main > div {
+#cards > div {
     width: 15em;
     height: 24em;
 
@@ -50,18 +57,23 @@ body > main > div {
     background-color: var(--base-300);
 }
 
-body > main > div > img {
+#cards > div > img {
     width: 15em;
     height: 10em;
     
     object-fit: contain;
 }
 
-body > main > div > * {
+#cards > div > * {
     text-align: center;
 }
 
-body > main > div > ul > li {
+#cards > div > ul {
+    position: relative;
+    bottom: 0;
+}
+
+#cards > div > ul > li {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
